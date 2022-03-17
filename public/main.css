@@ -1,0 +1,33 @@
+body{
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    width: 100%; 
+}
+
+canvas{
+    border: 1px solid black;
+    background: transparent;
+    cursor: none;
+    position: absolute;
+}
+
+.colorButton{
+    height: 25px;
+    width: 25px;
+}
+
+#colorButtonHolder{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 225px;
+}
+
+#drawDiv{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 1202px;
+}

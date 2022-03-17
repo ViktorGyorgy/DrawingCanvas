@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor</title>
+    <link rel="stylesheet" href="main.css"/>
+</head>
+<body>
+    <div id = 'drawDiv'>
+        <div id = 'canvasHolder' style="position: relative;height: 802px;width: 1202px;">
+            <canvas height=800 width=1200 id='myCanvas'></canvas>
+            <canvas height=800 width=1200 id='cursorCanvas'></canvas>
+        </div>
+        <div id='colorButtonHolder'>
+            <div class="colorButton" style="background-color: black;" onclick="setColor('black')"></div>
+            <div class="colorButton" style="background-color: white;" onclick="setColor('white')"></div>
+            <div class="colorButton" style="background-color: blue;" onclick="setColor('blue')"></div>
+            <div class="colorButton" style="background-color: red;" onclick="setColor('red')"></div>
+            <div class="colorButton" style="background-color: lightskyblue;" onclick="setColor('lightskyblue')"></div>
+            <div class="colorButton" style="background-color: yellow;" onclick="setColor('yellow')"></div>
+            <div class="colorButton" style="background-color: pink;" onclick="setColor('pink')"></div>
+            <div class="colorButton" style="background-color: brown;" onclick="setColor('brown')"></div>
+            <div class="colorButton" style="background-color: magenta;" onclick="setColor('magenta')"></div>
+            <div class="colorButton" style="background-color: lightblue;" onclick="setColor('lightblue')"></div>
+            <div class="colorButton" style="background-color: lightgreen;" onclick="setColor('lightgreen')"></div>
+            <div class="colorButton" style="background-color: lightslategray;" onclick="setColor('lightslategray')"></div>
+            <div class="colorButton" style="background-color: darkblue;" onclick="setColor('darkblue')"></div>
+            <div class="colorButton" style="background-color: darkgreen;" onclick="setColor('darkgreen')"></div>
+            <div class="colorButton" style="background-color: orange;" onclick="setColor('orange')"></div>
+            <div class="colorButton" style="background-color: purple;" onclick="setColor('purple')"></div>
+            <div class="colorButton" style="background-color: orangered;" onclick="setColor('orangered')"></div>
+            <div class="colorButton" style="background-color: indianred;" onclick="setColor('indianred')"></div>
+        </div>
+        <div id='toolHolder'>
+            <image src='images/pencil.png' width=40 height=40 onclick="setTool('pencil')"/>
+            <image src='images/filler.png' width=40 height=40 onclick="setTool('filler')"/>
+        </div>
+        <input type='color'>
+        <button onclick="setColor(document.getElementsByTagName('input')[0].value)">Use color</button>
+        <button onclick="ctx.clearRect(0, 0, 1200, 800)">Clear Drawing</button>
+        <a id="download" download="image.png"><button type="button" onClick="saveCanvas()">Download</button></a>
+    </div>
+    <script src='main.js'></script>
+</body>
+</html>
